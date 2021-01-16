@@ -17,7 +17,7 @@ h2 {
   background-size: cover;
   top: 0;
   height: 100vh;
-  position: relative;
+  /* position: relative; */
 }
 
 .title__first {
@@ -25,7 +25,7 @@ h2 {
   left: 10%; */
   left: 121px;
   top: 240px;
-  position: absolute;
+  /* position: absolute; */
 }
 .title__second {
   position: absolute;

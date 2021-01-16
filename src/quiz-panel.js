@@ -16,6 +16,9 @@ const QuizParams = {
   quizName: "",
 };
 
+localStorage.setItem("trueAnswer", 0);
+localStorage.setItem("falseAnswer", 0);
+
 // check answers and increment counters
 function checkAnswer(e) {
   // disable button action
@@ -24,13 +27,13 @@ function checkAnswer(e) {
 
   if (parseInt(e.target.dataset.id, 10) === QuizParams.correctAnswer.id) {
     e.target.classList.add("btn--correct");
-    QuizParams.trueAnswer++;
+    localStorage.setItem("trueAnswer", ++QuizParams.trueAnswer);
     setTimeout(() => {
       showQuestion(QuizParams.quizName);
     }, 1000);
   } else {
     e.target.classList.add("btn--wrong");
-    QuizParams.falseAnswer++;
+    localStorage.setItem("falseAnswer", ++QuizParams.falseAnswer);
     setTimeout(() => {
       showQuestion(QuizParams.quizName);
     }, 1000);
