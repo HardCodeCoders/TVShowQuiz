@@ -14,7 +14,7 @@ class QuizOptions {
     }
   }
 
-  // Draw random question
+  // Draw random answer
   drawAnswers(question) {
     const response = [];
     const answers = [];

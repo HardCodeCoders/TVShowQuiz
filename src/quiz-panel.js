@@ -2,24 +2,42 @@ import GOTPanel from "./got-panel";
 import RMPanel from "./rm-panel";
 import BBPanel from "./bb-panel";
 
+const answersBtn = document.querySelectorAll(".main__quiz__button");
+const logoImg = document.querySelector("#logo");
+
 const gotQuizPanel = new GOTPanel(53);
 const rmQuizPanel = new RMPanel(20);
 const bbQuizPanel = new BBPanel(50);
-let correctAnswer = "";
-let questionCounter = 1;
+const QuizParams = {
+  correctAnswer: "",
+  questionCounter: 0,
+  trueAnswer: 0,
+  falseAnswer: 0,
+  quizName: "",
+};
 
+// check answers and increment counters
 function checkAnswer(e) {
-  if (parseInt(e.target.dataset.id, 10) === correctAnswer.id) {
+  // disable button action
+  answersBtn.forEach((e) => e.removeEventListener("click", checkAnswer));
+  QuizParams.questionCounter++;
+
+  if (parseInt(e.target.dataset.id, 10) === QuizParams.correctAnswer.id) {
     e.target.classList.add("btn--correct");
-    questionCounter++;
+    QuizParams.trueAnswer++;
     setTimeout(() => {
-      showQuestion();
+      showQuestion(QuizParams.quizName);
     }, 1000);
   } else {
     e.target.classList.add("btn--wrong");
+    QuizParams.falseAnswer++;
+    setTimeout(() => {
+      showQuestion(QuizParams.quizName);
+    }, 1000);
   }
 }
 
+// Set character image on the webpage
 function insertImage(correctAnswer) {
   const characterImg = document.querySelector("#character-img");
   setTimeout(() => {
@@ -28,10 +46,10 @@ function insertImage(correctAnswer) {
   }, 100);
 }
 
+// Display answers on the webpage
 function insertAnswers(answers) {
-  const answersBtn = document.querySelectorAll(".main__quiz__button");
   setTimeout(() => {
-    if (answers[0].id === undefined) insertAnswers(answers);
+    if (answers[3].id === undefined) insertAnswers(answers);
     else {
       for (let i in answers) {
         clearBtn(answersBtn[i]);
@@ -40,19 +58,43 @@ function insertAnswers(answers) {
         answersBtn[i].addEventListener("click", checkAnswer);
       }
     }
-  }, 100);
+  }, 200);
 }
 
+// Change button color
 function clearBtn(btn) {
   btn.classList.remove("btn--correct");
   btn.classList.remove("btn--wrong");
 }
 
-export function showQuestion() {
-  const answers = gotQuizPanel.drawAnswers(questionCounter);
-  correctAnswer = answers[0];
-  const newOrder = gotQuizPanel.shuffledArray(answers);
+function setQuestionParameters(base) {
+  const answers = base.drawAnswers(QuizParams.questionCounter + 1);
+  const newOrder = base.shuffledArray(answers);
+  QuizParams.correctAnswer = answers[0];
 
-  insertImage(correctAnswer);
+  insertImage(QuizParams.correctAnswer);
   insertAnswers(newOrder);
+}
+
+export function showQuestion(quizName) {
+  QuizParams.quizName = quizName;
+  switch (quizName) {
+    case "got":
+      setQuestionParameters(gotQuizPanel);
+      logoImg.setAttribute("src", "img/got-logo.png");
+      break;
+
+    case "rm":
+      setQuestionParameters(rmQuizPanel);
+      logoImg.setAttribute("src", "img/rm-logo.png");
+      break;
+
+    case "bb":
+      setQuestionParameters(bbQuizPanel);
+      logoImg.setAttribute("src", "img/bb-logo.png");
+      break;
+
+    default:
+      alert("error: wrong category");
+  }
 }
