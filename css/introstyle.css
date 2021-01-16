@@ -1,0 +1,109 @@
+/* INTRO SCREEN*/
+p {
+  display: flex;
+  font-size: 52px;
+  color: 3c404d;
+  font-weight: bolder;
+  margin-left: 5%;
+  margin-top: 150px;
+}
+
+.content {
+  display: flex;
+  position: relative;
+  margin-left: 7%;
+}
+
+.content h3 {
+  font-size: 36px;
+  font-weight: normal;
+}
+.photo {
+  flex: 4;
+  float: right;
+  top: 15%;
+}
+
+.GameOfThrone {
+  margin-right: 50 px;
+  transition: all 0.5s ease-in-out;
+}
+
+.GameOfThrone:hover {
+  transform: scale(1.2);
+}
+
+.Breaking-Bad {
+  transition: all 0.5s ease-in-out;
+}
+
+.Breaking-Bad:hover {
+  transform: scale(1.2);
+}
+
+.RickAndMorty {
+  transition: all 0.5s ease-in-out;
+}
+
+.RickAndMorty:hover {
+  transform: scale(1.2);
+}
+
+/* filler panel */
+
+.text p {
+  font-size: 30px;
+  font-weight: normal;
+  margin-left: 18%;
+}
+
+/* b{
+    color: white;
+    font-size: 36px;
+    font-weight: bolder;
+  } */
+
+.custom-field {
+  position: relative;
+  font-size: 36px;
+}
+
+.custom-field input {
+  border: none;
+  background-color: var(--bg-text-border);
+  padding: 20px;
+  width: 450px;
+  border-radius: 50px;
+  margin-left: 150px;
+  margin-bottom: 50px;
+  font-size: 36px;
+}
+
+.custom-field .placeholder {
+  position: absolute;
+  left: 200px;
+  transition: all 0.3s ease;
+}
+
+.custom-field input:valid + .placeholder,
+.custom-field input:focus + .placeholder {
+  top: -20%;
+  font-size: 16px;
+  color: rgb(238, 240, 241);
+}
+
+.btn2 {
+  background-color: #492230;
+  height: 80px;
+  width: 300px;
+  border-radius: 50px;
+  margin-left: 225px;
+  transition: all 0.5s ease-in-out;
+  color: white;
+  font-size: 36px;
+  font-weight: bolder;
+}
+
+.btn2:hover {
+  transform: scale(1.1);
+}
