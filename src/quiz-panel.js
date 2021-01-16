@@ -16,19 +16,20 @@ const QuizParams = {
   quizName: "",
 };
 
+// check answers and increment counters
 function checkAnswer(e) {
+  // disable button action
   answersBtn.forEach((e) => e.removeEventListener("click", checkAnswer));
+  QuizParams.questionCounter++;
 
   if (parseInt(e.target.dataset.id, 10) === QuizParams.correctAnswer.id) {
     e.target.classList.add("btn--correct");
-    QuizParams.questionCounter++;
     QuizParams.trueAnswer++;
     setTimeout(() => {
       showQuestion(QuizParams.quizName);
     }, 1000);
   } else {
     e.target.classList.add("btn--wrong");
-    QuizParams.questionCounter++;
     QuizParams.falseAnswer++;
     setTimeout(() => {
       showQuestion(QuizParams.quizName);
@@ -36,6 +37,7 @@ function checkAnswer(e) {
   }
 }
 
+// Set character image on the webpage
 function insertImage(correctAnswer) {
   const characterImg = document.querySelector("#character-img");
   setTimeout(() => {
@@ -44,6 +46,7 @@ function insertImage(correctAnswer) {
   }, 100);
 }
 
+// Display answers on the webpage
 function insertAnswers(answers) {
   setTimeout(() => {
     if (answers[3].id === undefined) insertAnswers(answers);
@@ -58,6 +61,7 @@ function insertAnswers(answers) {
   }, 200);
 }
 
+// Change button color
 function clearBtn(btn) {
   btn.classList.remove("btn--correct");
   btn.classList.remove("btn--wrong");

@@ -1,4 +1,4 @@
 import { showQuestion } from "./quiz-panel";
 
-// Fucntion takes string parameter such as: got, rm, bb
-showQuestion("bb");
+// Show response from API, the fucntion takes a string parameter such as: got, rm, bb
+showQuestion("got");
