@@ -1,0 +1,34 @@
+a {
+  text-decoration: none;
+}
+h2 {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 72px;
+  line-height: 85px;
+  color: #89877c;
+}
+header {
+  height: 100vh;
+  background-image: url("../img/main.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0;
+  background-attachment: scroll;
+  margin: auto;
+  height: 1078px;
+}
+
+.main__header-first {
+  left: 121px;
+  top: 240px;
+  position: absolute;
+  padding: 240px 1298px 598px 359;
+}
+.main__header-second {
+  color: #bf9216;
+  /* left: 1093px;
+    top: 780px; */
+  padding: 480px 287.98px 208px 1131px;
+}
