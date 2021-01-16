@@ -8,27 +8,33 @@ h2 {
   line-height: 85px;
   color: #89877c;
 }
-header {
-  height: 100vh;
+
+.container {
+  display: flex;
   background-image: url("../img/main.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   top: 0;
-  background-attachment: scroll;
-  margin: auto;
-  height: 1078px;
+  height: 100vh;
+  position: relative;
 }
 
-.main__header-first {
+.title__first {
+  /* top: 30%;
+  left: 10%; */
   left: 121px;
   top: 240px;
   position: absolute;
-  padding: 240px 1298px 598px 359;
 }
-.main__header-second {
+.title__second {
+  position: absolute;
+  /* top: 90%;
+  left: 75%; */
+  left: 1193px;
+  top: 500px;
+}
+
+.title__special {
   color: #bf9216;
-  /* left: 1093px;
-    top: 780px; */
-  padding: 480px 287.98px 208px 1131px;
 }
