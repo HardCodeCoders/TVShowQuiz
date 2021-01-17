@@ -45,36 +45,36 @@ p {
 }
 
 .GameOfThrone {
-  margin-left: -9rem;
-  position: relative;
-  z-index: 10;
-  overflow: hidden;
-  transition: all 0.5s ease-in-out;
-}
-
-.GameOfThrone:hover {
-  transform: scale(1.2);
-}
-
-.Breaking-Bad {
-  margin-right: 3rem;
-  z-index: -1;
-  transition: all 0.5s ease-in-out;
-}
-
-.Breaking-Bad:hover {
-  transform: scale(1.2);
-}
-
-.RickAndMorty {
-  margin-left: -12rem;
-  z-index: -1;
-  transition: all 0.5s ease-in-out;
-}
-
-.RickAndMorty:hover {
-  transform: scale(1.2);
-}
+    margin-left: -9rem;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .GameOfThrone:hover {
+    transform: scale(1.2);
+  }
+  
+  .Breaking-Bad {
+    margin-right: 3rem;
+    z-index: -1;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .Breaking-Bad:hover {
+    transform: scale(1.2);
+  }
+  
+  .RickAndMorty {
+    margin-left: -12rem;
+    z-index: -1;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .RickAndMorty:hover {
+    transform: scale(1.2);
+  }
 
 /* filler panel */
 
