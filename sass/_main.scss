@@ -1,0 +1,40 @@
+a {
+  text-decoration: none;
+}
+h2 {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 72px;
+  line-height: 85px;
+  color: #89877c;
+}
+
+.container {
+  display: flex;
+  background-image: url("../img/main.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0;
+  height: 100vh;
+  /* position: relative; */
+}
+
+.title__first {
+  /* top: 30%;
+  left: 10%; */
+  left: 121px;
+  top: 240px;
+  /* position: absolute; */
+}
+.title__second {
+  position: absolute;
+  /* top: 90%;
+  left: 75%; */
+  left: 1193px;
+  top: 500px;
+}
+
+.title__special {
+  color: #bf9216;
+}

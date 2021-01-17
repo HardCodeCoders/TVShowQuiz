@@ -22,13 +22,13 @@
   },
   "homepage": "https://github.com/TenGosc007/TVShowQuiz#readme",
   "devDependencies": {
+    "file-loader": "^4.2.0",
+    "node-sass": "^4.14.1",
+    "prettier": "1.18.2",
+    "sass-loader": "^8.0.0",
     "webpack": "^4.39.1",
     "webpack-cli": "^3.3.6",
-    "webpack-dev-server": "^3.8.0",
-    "file-loader": "^4.2.0",
-    "node-sass": "^4.13.0",
-    "prettier": "1.18.2",
-    "sass-loader": "^8.0.0"
+    "webpack-dev-server": "^3.8.0"
   },
   "dependencies": {
     "axios": "^0.21.1",

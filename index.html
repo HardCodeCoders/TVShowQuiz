@@ -12,37 +12,24 @@
       content=" Aleksander Atamańczuk, Klaudia Gołębiowska, Anna Pastor"
     />
     <title>TVShowQuiz</title>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="node_modules/normalize.css/normalize.css"
-    />
-    <link
-      rel="stylesheet"
-      href="css/mainstyle.css"
-      as="style"
-      onload="this.rel='stylesheet'"
-    />
-    <link
-      rel="stylesheet"
-      href="css/style.css"
-      as="style"
-      onload="this.rel='stylesheet'"
-    />
+    <link rel="stylesheet" type="text/css" href="node_modules/normalize.css/normalize.css" />
+    <link rel="stylesheet" href="css/mainstyle.css" as="style" onload="this.rel='stylesheet'" />
+    <link rel="stylesheet"  href="css/style.css"  as="style" onload="this.rel='stylesheet'" />
   </head>
   <body>
-    <div class="container">
-      <header>
-        <div class="title__first">
-          <a href="#"
-            ><h2>WOULD <br />YOU <br />DARE</h2></a
-          >
-        </div>
-        <div class="title__second">
-          <a href="quiz-panel.html"><h2 class="title__special">TO PLAY</h2></a>
-        </div>
-      </header>
-      <script defer src="index.js"></script>
-    </div>
+    <header class="header__container">
+      <div class="title__first">
+        <a href="#">
+          <h2>WOULD <br />YOU <br />DARE?</h2>
+        </a>
+      </div>
+
+      <div class="title__second">
+        <a href="quiz-panel.html">
+          <h2 class="title__special">TO PLAY?</h2>
+        </a>
+      </div>
+    </header>
+    <script defer src="index.js"></script>
   </body>
 </html>
