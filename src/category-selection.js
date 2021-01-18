@@ -6,7 +6,7 @@ function goToQuiz(category) {
   localStorage.setItem("category", category);
   const page = window.location.pathname.split("/");
   page.pop();
-  console.log("test ", page.join("/"));
+  console.log("test2 ", page.join("/"));
   window.location.pathname = page + "/quiz-panel.html";
 }
 
