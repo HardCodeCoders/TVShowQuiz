@@ -4,7 +4,11 @@ const categoryBb = document.querySelector(".Breaking-Bad");
 
 function goToQuiz(category) {
   localStorage.setItem("category", category);
-  window.location.href = "/quiz-panel.html";
+  const page = window.location.pathname.split("/");
+  page.pop();
+  page.join("/");
+  console.log(page);
+  window.location.href = page + "/quiz-panel.html";
 }
 
 export function selectCategory() {
