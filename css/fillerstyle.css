@@ -110,13 +110,15 @@ p {
 }
 
 .btn2 {
-  background-color: #492230;
+  background-color: #f1ecee0e;
+  border-color: #c4c4c4;
+  border-width: 3px;
   height: 80px;
   width: 300px;
   border-radius: 50px;
   margin-left: 135px;
   transition: all 0.5s ease-in-out;
-  color: white;
+  color:#202427;
   font-size: 36px;
   font-weight: 900;
   outline: none;
