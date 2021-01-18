@@ -6,6 +6,7 @@ function goToQuiz(category) {
   localStorage.setItem("category", category);
   let page;
   page = "TVShowQuiz";
+  console.log("test 3");
   window.location.pathname = page || "" + "/quiz-panel.html";
 }
 
