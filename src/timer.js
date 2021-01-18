@@ -9,16 +9,21 @@ export default class QuizTimer {
   }
 
   // Update timer line on the webpage
-  updateProgressBar(timePercent) {
-    styleElem.innerHTML = `.footer__time-bar__time-progress::before {left: ${timePercent -
-      1}%;} .footer__time-bar__time-progress::after {width: ${timePercent}%;}`;
+  updateProgressBar() {
+    styleElem.innerHTML = `
+    .footer__time-bar__time-progress::before {
+      left: 99%;
+      transition: all ${TIME}s linear;
+    } .footer__time-bar__time-progress::after {
+      width: 100%;
+      transition: all ${TIME}s linear;
+    }`;
   }
 
   // Counting down fucntion
   countingDown() {
     const t = setInterval(() => {
-      let timePercent = 100 - (this.timeLeft * 100) / TIME;
-      this.updateProgressBar(timePercent);
+      this.updateProgressBar();
 
       // display time on the webpage
       if (this.timeLeft < 10) this.prefix = "0:0";
@@ -33,7 +38,7 @@ export default class QuizTimer {
             "\nWrong: " +
             localStorage.getItem("falseAnswer")
         );
-        document.location.href = "/intro-panel.html";
+        window.location.pathname = "/intro-panel.html";
       }
     }, 1000);
   }

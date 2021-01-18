@@ -4,7 +4,7 @@ const categoryBb = document.querySelector(".Breaking-Bad");
 
 function goToQuiz(category) {
   localStorage.setItem("category", category);
-  document.location.href = "/quiz-panel.html";
+  window.location.pathname = "/quiz-panel.html";
 }
 
 export function selectCategory() {

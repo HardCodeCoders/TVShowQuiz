@@ -147,7 +147,7 @@
   border-radius: 1rem;
   margin: 0 1rem;
   position: relative;
-  /* overflow: hidden; */
+  transition: 1s;
 }
 
 .footer__time-bar__time-progress::before {
