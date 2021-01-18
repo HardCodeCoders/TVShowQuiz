@@ -5,10 +5,10 @@ const categoryBb = document.querySelector(".Breaking-Bad");
 function goToQuiz(category) {
   localStorage.setItem("category", category);
   const page = window.location.pathname.split("/");
-  // page.pop();
-  // page.join("/");
-  // console.log("test ", page);
-  window.location.pathname = "/quiz-panel.html";
+  page.pop();
+  page.join("/");
+  console.log("test ", page);
+  window.location.pathname = page + "/quiz-panel.html";
 }
 
 export function selectCategory() {
