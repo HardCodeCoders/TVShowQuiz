@@ -7,7 +7,7 @@ function goToQuiz(category) {
   const page = window.location.pathname.split("/");
   page.pop();
   page.join("/");
-  console.log(page);
+  console.log("test ", page);
   window.location.href = page + "/quiz-panel.html";
 }
 
