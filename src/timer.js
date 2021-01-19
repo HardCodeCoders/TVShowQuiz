@@ -38,7 +38,11 @@ export default class QuizTimer {
             "\nWrong: " +
             localStorage.getItem("falseAnswer")
         );
-        window.location.pathname = "/intro-panel.html";
+
+        const page = window.location
+          .toString()
+          .substr(0, window.location.toString().lastIndexOf("/"));
+        window.location.href = page + "/intro-panel.html";
       }
     }, 1000);
   }

@@ -52,7 +52,13 @@ function insertImage(correctAnswer) {
 // Display answers on the webpage
 function insertAnswers(answers) {
   setTimeout(() => {
-    if (answers[3].id === undefined) insertAnswers(answers);
+    if (
+      answers[0].id === undefined ||
+      answers[1].id === undefined ||
+      answers[2].id === undefined ||
+      answers[3].id === undefined
+    )
+      insertAnswers(answers);
     else {
       for (let i in answers) {
         clearBtn(answersBtn[i]);
@@ -61,7 +67,7 @@ function insertAnswers(answers) {
         answersBtn[i].addEventListener("click", checkAnswer);
       }
     }
-  }, 200);
+  }, 400);
 }
 
 // Change button color
