@@ -2,7 +2,6 @@
   background-color: var(--bg-light-color);
   height: 100%;
   min-height: 100vh;
-
   overflow: hidden;
 }
 
@@ -15,7 +14,7 @@
   background-color: var(--bg-text-border);
   text-align: center;
   border-radius: 3rem;
-  line-height: 80px;
+  line-height: 5rem;
   box-shadow: 2px 2px 5px var(--shadow-color);
 }
 
@@ -34,7 +33,7 @@
 .header__img {
   width: 20rem;
   height: 100%;
-  padding: 20px;
+  padding: 1rem;
   display: flex;
   align-items: center;
   box-sizing: border-box;
@@ -47,12 +46,14 @@
 .main {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  padding: 0.5rem;
 }
 
 .main__character-img {
-  width: 300px;
-  height: 400px;
-  margin: 0 auto 2rem;
+  max-width: 350px;
+  max-height: 400px;
+  margin: 0 auto 1rem;
   flex: 1;
 }
 
@@ -60,7 +61,7 @@
   width: 80%;
   height: 100%;
   min-height: 400px;
-  min-width: 300px;
+  min-width: 350px;
   margin: auto;
   overflow: hidden;
   border-radius: 1rem;
@@ -72,9 +73,8 @@
 }
 
 .main__quiz {
-  width: 300px;
-  height: 400px;
-  padding: 0 4rem;
+  min-width: 22rem;
+  padding: 0 2rem;
   flex: 2;
   text-align: center;
 }
@@ -88,12 +88,13 @@
   margin: 0;
   color: white;
   font-weight: 700;
-  font-size: 48px;
+  font-size: 3rem;
   text-shadow: 1px 1px 3px var(--shadow-color);
 }
 
 .main__quiz__answers {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   grid-template-columns: 1fr 1fr;
   column-gap: 2rem;
   row-gap: 3rem;
@@ -104,9 +105,11 @@
   outline: none;
   border: none;
   font-weight: 400;
-  font-size: 36px;
+  font-size: 2rem;
   cursor: pointer;
   transition: filter 0.4s ease-in-out;
+  flex: 1;
+  min-width: 16rem;
 }
 
 .main__quiz__button:hover {
@@ -190,24 +193,38 @@
 
   .header__img--size {
     width: auto;
-    height: 100%;
+    height: 90%;
   }
 
   .main {
     flex-direction: column;
   }
 
+  #character-img {
+    min-width: 280px;
+    min-height: 320px;
+  }
+
   .main__quiz {
     padding: 10px;
     margin: auto;
+    height: 100px;
   }
 
+  .main__quiz__answers {
+    margin-top: 2rem;
+  }
+
+  .main__quiz--header {
+    line-height: 4rem;
+  }
   .main__quiz--header {
     font-size: 30px;
   }
 
   .main__quiz__button {
-    font-size: 24px;
-    line-height: 40px;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    margin-bottom: -1.5rem;
   }
 }

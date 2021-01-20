@@ -7,7 +7,7 @@ class BBPanel extends quizOptions {
   }
 
   // Get character form API
-  getCharacter(characterId) {
+  async getCharacter(characterId) {
     if (characterId > this.questionsNum - 1) {
       characterId = characterId % (this.questionsNum - 1);
     }
@@ -15,14 +15,12 @@ class BBPanel extends quizOptions {
     const userId = this.indexArray[characterId - 1];
     const response = {};
 
-    (async () => {
-      const res = await axios(
-        `https://breakingbadapi.com/api/characters/${userId}`
-      );
-      response.id = res.data[0].char_id;
-      response.name = res.data[0].name;
-      response.image = res.data[0].img;
-    })();
+    const res = await axios(
+      `https://breakingbadapi.com/api/characters/${userId}`
+    );
+    response.id = res.data[0].char_id;
+    response.name = res.data[0].name;
+    response.image = res.data[0].img;
 
     return response;
   }
