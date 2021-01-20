@@ -56,12 +56,27 @@ Przyjmujemy poniższy format commit message
 
 ### Pull Request
 
-Pracujemy na gałęziach w metodologii `branch per feature`. Staramy się tworzyć małe PR. W opisie PR powinno być dokładnie opisane co on zmienia. Każdy PR musi być zaakceptowany przez przynajmniej jedną inną osobę.
+Pracujemy na `forkach` więc każdy ma swoją własną wersję repozytorium. Staramy się tworzyć małe PR. W opisie PR powinno być dokładnie opisane co on zmienia. Każdy PR musi być zaakceptowany przez przynajmniej jedną inną osobę.
 
 ## Development
 
 ### Uruchomienie:
 
+```
 1. Sklonować repo na dysk i otworzyć w konsoli
 2. npm install
 3. npm start (projekt uruchomi się na localhost:8080)
+```
+
+### Pobranie najnowszej wersji kodu z głównego projektu
+```
+git remote add upstream [http address] -> TYLKO ZA PIERWSZYM RAZEM!!! Podać adres głównego projektu, nie swojego forka!
+git fetch upstream
+git merge upstream/main
+```
+
+### Praca z Web Pack
+```
+npm start       -> uruchamia serwer, strona widoczna pod adresem localhost:8080
+npm run build   -> buduje projekt, tworzy plik index.js
+```
