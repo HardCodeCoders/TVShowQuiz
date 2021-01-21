@@ -12,7 +12,7 @@
 p {
   display: flex;
   font-size: 52px;
-  color: #E5E5E5;
+  color: #e5e5e5;
   font-weight: 900;
   margin-bottom: 150px;
 }
@@ -47,6 +47,7 @@ p {
   
   .Breaking-Bad:hover {
     transform: scale(1.2);
+    z-index: 11;
   }
   
   .RickAndMorty {
@@ -57,6 +58,7 @@ p {
   
   .RickAndMorty:hover {
     transform: scale(1.2);
+    z-index: 99;
   }
 
 /* filler panel */
@@ -72,16 +74,16 @@ p {
 .custom-field {
   position: relative;
   font-size: 32px;
-  color:rgb(230, 225, 225);
+  color: rgb(230, 225, 225);
   right: 1rem;
-  border:none;
+  border: none;
 }
 
 .custom-field input {
   border: none;
   outline: none;
-  color:rgba(255, 255, 255, 0.808);
-  background-color:rgba(218, 217, 216, 0.336);
+  color: rgba(255, 255, 255, 0.808);
+  background-color: rgba(218, 217, 216, 0.336);
   padding: 30px;
   width: 450px;
   border-radius: 50px;
@@ -105,7 +107,7 @@ p {
 .custom-field input:focus + .placeholder {
   top: -0.5rem;
   font-size: 16px;
-  color:rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
   outline: none;
 }
 
@@ -118,7 +120,7 @@ p {
   border-radius: 50px;
   margin-left: 135px;
   transition: all 0.5s ease-in-out;
-  color:#202427;
+  color: #202427;
   font-size: 36px;
   font-weight: 900;
   outline: none;
