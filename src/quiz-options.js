@@ -15,12 +15,12 @@ class QuizOptions {
   }
 
   // Draw random answer
-  drawAnswers(question) {
+  async drawAnswers(question) {
     const response = [];
     const answers = [];
 
     // get correct answer
-    const correct = this.getCharacter(question);
+    const correct = await this.getCharacter(question);
     answers.push(question);
 
     // random wrong answers
@@ -31,9 +31,9 @@ class QuizOptions {
 
     // generate final response
     response[0] = correct;
-    response[1] = this.getCharacter(answers[1]);
-    response[2] = this.getCharacter(answers[2]);
-    response[3] = this.getCharacter(answers[3]);
+    response[1] = await this.getCharacter(answers[1]);
+    response[2] = await this.getCharacter(answers[2]);
+    response[3] = await this.getCharacter(answers[3]);
 
     return response;
   }

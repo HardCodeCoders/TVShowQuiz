@@ -5,8 +5,8 @@ import BBPanel from "./bb-panel";
 const answersBtn = document.querySelectorAll(".main__quiz__button");
 const logoImg = document.querySelector("#logo");
 
-const gotQuizPanel = new GOTPanel(53);
-const rmQuizPanel = new RMPanel(20);
+const gotQuizPanel = new GOTPanel(50);
+const rmQuizPanel = new RMPanel(50);
 const bbQuizPanel = new BBPanel(50);
 const QuizParams = {
   correctAnswer: "",
@@ -52,7 +52,13 @@ function insertImage(correctAnswer) {
 // Display answers on the webpage
 function insertAnswers(answers) {
   setTimeout(() => {
-    if (answers[3].id === undefined) insertAnswers(answers);
+    if (
+      answers[0].id === undefined ||
+      answers[1].id === undefined ||
+      answers[2].id === undefined ||
+      answers[3].id === undefined
+    )
+      insertAnswers(answers);
     else {
       for (let i in answers) {
         clearBtn(answersBtn[i]);
@@ -61,7 +67,7 @@ function insertAnswers(answers) {
         answersBtn[i].addEventListener("click", checkAnswer);
       }
     }
-  }, 200);
+  }, 400);
 }
 
 // Change button color
@@ -70,8 +76,8 @@ function clearBtn(btn) {
   btn.classList.remove("btn--wrong");
 }
 
-function setQuestionParameters(base) {
-  const answers = base.drawAnswers(QuizParams.questionCounter + 1);
+async function setQuestionParameters(base) {
+  const answers = await base.drawAnswers(QuizParams.questionCounter + 1);
   const newOrder = base.shuffledArray(answers);
   QuizParams.correctAnswer = answers[0];
 
