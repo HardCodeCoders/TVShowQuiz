@@ -7,7 +7,7 @@ class RMPanel extends quizOptions {
   }
 
   // Get character form API
-  getCharacter(characterId) {
+  async getCharacter(characterId) {
     if (characterId > this.questionsNum - 1) {
       characterId = characterId % (this.questionsNum - 1);
     }
@@ -15,14 +15,12 @@ class RMPanel extends quizOptions {
     const userId = this.indexArray[characterId - 1];
     const response = {};
 
-    (async () => {
-      const res = await axios(
-        `https://rickandmortyapi.com/api/character/${userId}`
-      );
-      response.id = res.data.id;
-      response.name = res.data.name;
-      response.image = res.data.image;
-    })();
+    const res = await axios(
+      `https://rickandmortyapi.com/api/character/${userId}`
+    );
+    response.id = res.data.id;
+    response.name = res.data.name;
+    response.image = res.data.image;
 
     return response;
   }
