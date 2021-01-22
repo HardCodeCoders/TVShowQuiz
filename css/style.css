@@ -4,6 +4,8 @@
   --bg-light-color: #efefef;
   --bg-text-border: #c4c4c4;
   --shadow-color: #666;
+  --correct-color: #cbdf94;
+  --wrong-color: #492230;
 }
 * {
   margin: 0;
