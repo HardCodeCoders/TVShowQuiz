@@ -27,6 +27,13 @@ p {
   color: #E5E5E5;
 }
 
+.content h2 {
+  font-size: 2rem;
+  font-weight: normal;
+  color: #E5E5E5;
+  font-weight: bold;
+}
+
 .photo {
   float: right;
   top: 15%;
