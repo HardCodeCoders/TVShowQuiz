@@ -109,6 +109,7 @@ p {
 .custom-field input:valid + .placeholder,
 .custom-field input:focus + .placeholder {
   top: -0.5rem;
+  left: 8rem;
   font-size: 16px;
   color: rgb(255, 255, 255);
   outline: none;
