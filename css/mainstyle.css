@@ -10,14 +10,27 @@ h2 {
   color: #89877c;
   text-shadow: 2px 2px 5px #333;
   transition: all 1s ease-in-out;
+  animation: pulse 3s ease-in-out 1s infinite alternate;
 }
 
 h2:hover {
-  transform: scale(1.1);
+  font-size: 5.5rem;
   text-shadow: 4px 4px 2px #111;
 }
 
+@keyframes pulse {
+  from {
+    transform: scale(0.98);
+    text-shadow: 1px 1px 2px #111;
+  }
+  to {
+    transform: scale(1.02);
+    text-shadow: 3px 3px 4px #111;
+  }
+}
+
 .container {
+  margin-left: -4%;
   display: flex;
   background-image: linear-gradient(
       170deg,
@@ -48,6 +61,34 @@ h2:hover {
   left: 5%;
   position: absolute;
 }
+
+.drop1 {
+  position: relative;
+  animation: drop 1.6s ease-out;
+}
+
+.drop2 {
+  position: relative;
+  animation: drop 1.4s ease-out;
+}
+
+.drop3 {
+  position: relative;
+  animation: drop 1s ease-out;
+}
+
+@keyframes drop {
+  0% {
+    top: -30rem;
+    opacity: 0;
+  }
+
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+
 .title__second {
   position: absolute;
   bottom: 10%;
@@ -55,6 +96,18 @@ h2:hover {
   z-index: 99;
   width: 100%;
   text-align: right;
+  animation: slide 2s ease-out;
+}
+
+@keyframes slide {
+  0% {
+    right: -20%;
+    opacity: 0;
+  }
+  100% {
+    right: 0%;
+    opacity: 1;
+  }
 }
 
 .title__special {
@@ -65,7 +118,6 @@ h2:hover {
   position: relative;
   height: 100vh;
   width: 100%;
-  /* background: #fff; */
 }
 
 .fog-container {
@@ -113,6 +165,10 @@ h2:hover {
   h2 {
     font-size: 4rem;
     line-height: 4rem;
+  }
+
+  .container {
+    margin-left: 0;
   }
 
   .title__first {
