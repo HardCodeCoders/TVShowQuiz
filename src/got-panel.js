@@ -8,6 +8,7 @@ class GOTPanel extends quizOptions {
 
   // Get character form API
   async getCharacter(characterId) {
+    characterId = characterId || 1;
     if (characterId > this.questionsNum - 1) {
       characterId = characterId % (this.questionsNum - 1);
     }

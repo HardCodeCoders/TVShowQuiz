@@ -9,7 +9,7 @@ function goToQuiz(category) {
     .substr(0, window.location.toString().lastIndexOf("/"));
 
   // Redirect
-  window.location.href = page + "/quiz-panel.html";
+  window.location.href = page + "/filler-panel.html";
 }
 
 export function selectCategory() {
