@@ -1,7 +1,7 @@
 const quizTime = document.querySelector(".footer__time-bar__time");
+const characterImg = document.querySelector("#character-img");
 const styleElem = document.head.appendChild(document.createElement("style"));
 const TIME = 10;
-
 export default class QuizTimer {
   constructor() {
     this.timeLeft = TIME;
@@ -22,28 +22,30 @@ export default class QuizTimer {
 
   // Counting down fucntion
   countingDown() {
-    const t = setInterval(() => {
-      this.updateProgressBar();
-
-      // display time on the webpage
-      if (this.timeLeft < 10) this.prefix = "0:0";
-      quizTime.innerText = this.prefix + this.timeLeft--;
-
-      // stop timer
-      if (this.timeLeft < 0) {
-        clearInterval(t);
-        alert(
-          "Correct: " +
-            localStorage.getItem("trueAnswer") +
-            "\nWrong: " +
-            localStorage.getItem("falseAnswer")
-        );
-
-        const page = window.location
-          .toString()
-          .substr(0, window.location.toString().lastIndexOf("/"));
-        window.location.href = page + "/intro-panel.html";
+    setTimeout(() => {
+      if (!characterImg.style.backgroundImage) this.countingDown();
+      else {
+        const t = setInterval(() => {
+          this.updateProgressBar();
+          // display time on the webpage
+          if (this.timeLeft < 10) this.prefix = "0:0";
+          quizTime.innerText = this.prefix + this.timeLeft--;
+          // stop timer
+          if (this.timeLeft < 0) {
+            clearInterval(t);
+            alert(
+              "Correct: " +
+                localStorage.getItem("trueAnswer") +
+                "\nWrong: " +
+                localStorage.getItem("falseAnswer")
+            );
+            const page = window.location
+              .toString()
+              .substr(0, window.location.toString().lastIndexOf("/"));
+            window.location.href = page + "/ranking.html";
+          }
+        }, 1000);
       }
-    }, 1000);
+    }, 100);
   }
 }
