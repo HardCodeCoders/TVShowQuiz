@@ -1,12 +1,36 @@
 .container {
-  padding: 100px;
-  background-image: url("../img/tron.jpeg");
+  padding: 50px;
+  background-image: linear-gradient(
+      170deg,
+      rgba(0, 15, 31, 0.5) 5%,
+      rgba(29, 24, 16, 0.3) 40%,
+      rgba(4, 8, 15, 0.9) 100%
+    ),
+    url("../img/tron.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   top: 0;
   height: 100vh;
   position: relative;
+}
+
+.total {
+  position: relative;
+  top: -40rem;
+  animation: dropTotal 2.5s ease-out 2.5s forwards;
+}
+
+@keyframes dropTotal {
+  0% {
+    top: -40rem;
+    opacity: 0;
+  }
+
+  100% {
+    top: 0;
+    opacity: 1;
+  }
 }
 
 .shadow {
@@ -41,22 +65,20 @@
   height: 80px;
   width: 830px;
   border-radius: 50px;
-  /* background-color: #c4c4c4;
-  opacity: 70%; */
   line-height: 30px;
   margin-bottom: 2rem;
   text-shadow: 4px 4px 4px #121212;
-  background: #11111133;
-  box-shadow: 1px 1px 30px 30px #11111133;
+  background: #11111199;
+  box-shadow: 1px 1px 40px 40px #11111199;
   filter: brightness(1.1);
 }
 
 .box1 a {
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: 900;
   font-size: 3.5rem;
   color: #c4c4c4;
-  letter-spacing: 2px;
+  letter-spacing: 0.3rem;
 }
 
 .box2 {
@@ -68,13 +90,15 @@
   width: 830px;
   border-radius: 50px;
   opacity: 95%;
-  background-color: #202427;
+  background-color: #c4c4c4;
+  color: #202427;
+  font-weight: 900;
   line-height: 30px;
   font-size: 48px;
   justify-content: space-evenly;
   margin-bottom: 2rem;
-  text-shadow: 3px 3px 1px #121212;
   border: 1px solid #212121;
+  letter-spacing: 0.3rem;
 }
 
 .box3 {
@@ -89,12 +113,22 @@
   opacity: 95%;
 }
 
+.ranking {
+  font-size: 1.8rem;
+  text-shadow: 1px 1px 2px #333;
+}
+
 .ranking-nav {
   display: flex;
   list-style: none;
   justify-content: space-around;
   margin-top: 0.5rem;
   margin-bottom: 1rem;
+  color: #202427;
+  font-weight: 900;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
 }
 
 .ranking-nav li {
@@ -124,9 +158,6 @@
   justify-content: space-around;
 }
 
-.ranking {
-  text-shadow: 1px 1px 2px #333;
-}
 .ranking li {
   display: block;
 }
@@ -137,17 +168,59 @@
   color: #202427;
 }
 
+.player-result {
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem auto 0;
+  width: 830px;
+  color: #202427;
+  background-color: #c4c4c4;
+  border-radius: 50px;
+  font-size: 1.8rem;
+  padding: 1rem;
+  font-weight: 700;
+  height: 80px;
+  position: relative;
+  top: -40rem;
+  opacity: 0;
+  animation: dropResult 2s ease-out forwards;
+}
+
+@keyframes dropResult {
+  0% {
+    top: -40rem;
+    opacity: 0;
+  }
+
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+
 .btn-container {
   display: flex;
   width: 830px;
   margin: auto;
+  opacity: 0;
+  animation: btnShow 3s ease-out 2.8s forwards;
+}
+
+@keyframes btnShow {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .btn1 {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  height: 60px;
+  height: 80px;
   width: 350px;
   margin-top: 50px;
   border-radius: 50px;
