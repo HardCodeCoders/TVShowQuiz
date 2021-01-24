@@ -1,6 +1,6 @@
 .container {
   padding: 150px;
-  background-image: linear-gradient(to left, rgba(31, 35, 37, 0.6), rgba(36, 36, 36, 0.7)), url("../img/got.jpg");
+  background-image: linear-gradient(to left, rgba(31, 35, 37, 0.281), rgba(36, 36, 36, 0.534)), url("../img/got.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
