@@ -74,7 +74,7 @@ h2 {
   padding-bottom: 50px;
 }
 
-.form {
+.name {
   position: relative;
   font-size: 32px;
   color: rgb(230, 225, 225);
@@ -82,7 +82,7 @@ h2 {
   border: none;
 }
 
-.form input {
+.name input {
   border: none;
   outline: none;
   color: rgba(255, 255, 255, 0.808);
@@ -96,7 +96,7 @@ h2 {
   font-size: 32px;
 }
 
-.custom-field .placeholder {
+.name .placeholder {
   position: absolute;
   /* top: calc(-50% + 0.5rem); */
   top: 50%;
@@ -106,8 +106,8 @@ h2 {
   outline: none;
 }
 
-.custom-field input:valid + .placeholder,
-.custom-field input:focus + .placeholder {
+.name input:valid + .placeholder,
+.name input:focus + .placeholder {
   top: -0.5rem;
   left: 8rem;
   font-size: 16px;
