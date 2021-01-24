@@ -1,6 +1,6 @@
 .container {
   padding: 150px;
-  background-image: url("../img/got.jpg");
+  background-image: linear-gradient(to left, rgba(4, 49, 82, 0.6), rgba(4, 29, 46, 0.7)), url("../img/got.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -9,7 +9,7 @@
   position: relative;
 }
 
-p {
+h2 {
   display: flex;
   font-size: 52px;
   color: #e5e5e5;
@@ -71,7 +71,7 @@ p {
   padding-bottom: 50px;
 }
 
-.custom-field {
+.form {
   position: relative;
   font-size: 32px;
   color: rgb(230, 225, 225);
@@ -79,7 +79,7 @@ p {
   border: none;
 }
 
-.custom-field input {
+.form input {
   border: none;
   outline: none;
   color: rgba(255, 255, 255, 0.808);
