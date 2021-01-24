@@ -1,6 +1,7 @@
 import { showQuestion } from "./quiz-panel";
 import { selectCategory } from "./category-selection";
 import QuizTimer from "./timer";
+import setBackground from "./filler-panel";
 
 const quizTimer = new QuizTimer();
 
@@ -11,6 +12,11 @@ switch (page) {
   case "intro-panel.html":
     // Select quiz category
     selectCategory();
+    break;
+
+  case "filler-panel.html":
+    // Seb background image
+    setBackground(null);
     break;
 
   case "quiz-panel.html":

@@ -9,7 +9,7 @@ class QuizOptions {
   // Generate unique random numbers between 0 and num
   createIndexArray(num) {
     while (this.indexArray.length < num) {
-      const r = Math.floor(Math.random() * num);
+      const r = Math.floor(Math.random() * num) + 1;
       if (this.indexArray.indexOf(r) === -1) this.indexArray.push(r);
     }
   }

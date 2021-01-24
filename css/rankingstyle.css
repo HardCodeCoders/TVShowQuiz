@@ -9,24 +9,28 @@
   position: relative;
 }
 
-.show-nav{
-    display: flex;
-    list-style: none;
-    justify-content: space-around;
-    /* te dwie linijki w sumie nic nie robią*/
-    padding-top: 1rem;
-    align-items: center;
+.shadow {
+  box-shadow: 4px 4px 6px #11111199;
 }
 
-.show-nav li{
-display: block;
+.show-nav {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  /* te dwie linijki w sumie nic nie robią*/
+  padding-top: 1rem;
+  align-items: center;
 }
 
-.show-nav li a{
-text-decoration: none;
-   color: #c4c4c4;
-   font-weight: bold;
-    }
+.show-nav li {
+  display: block;
+}
+
+.show-nav li a {
+  text-decoration: none;
+  color: #c4c4c4;
+  font-weight: bold;
+}
 
 .box1 {
   display: block;
@@ -41,31 +45,37 @@ text-decoration: none;
   opacity: 70%; */
   line-height: 30px;
   margin-bottom: 2rem;
+  text-shadow: 4px 4px 4px #121212;
+  background: #11111133;
+  box-shadow: 1px 1px 30px 30px #11111133;
+  filter: brightness(1.1);
 }
 
-.box1 a{
-text-transform: uppercase;
-font-weight: bold;
-font-size: 3.5rem;
-color:#c4c4c4;
-letter-spacing: 2px;
+.box1 a {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 3.5rem;
+  color: #c4c4c4;
+  letter-spacing: 2px;
 }
 
 .box2 {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 10px;
-    height: 80px;
-    width: 830px;
-    border-radius: 50px;
-    opacity: 80%;
-    background-color: #202427;
-    line-height: 30px;
-    font-size: 48px;
-    justify-content: space-evenly;
-    margin-bottom: 2rem;
-  }
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  height: 80px;
+  width: 830px;
+  border-radius: 50px;
+  opacity: 95%;
+  background-color: #202427;
+  line-height: 30px;
+  font-size: 48px;
+  justify-content: space-evenly;
+  margin-bottom: 2rem;
+  text-shadow: 3px 3px 1px #121212;
+  border: 1px solid #212121;
+}
 
 .box3 {
   display: block;
@@ -76,54 +86,62 @@ letter-spacing: 2px;
   width: 830px;
   border-radius: 50px;
   background-color: #c4c4c4;
-  opacity: 70%;
+  opacity: 95%;
 }
 
 .ranking-nav {
-    display: flex;
-    list-style: none;
-    justify-content: space-around;
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .ranking-nav li {
-   display: block;
+  display: block;
 }
 
 .ranking-nav li a {
-    font-size: 1.75rem;
-    text-transform: uppercase;
-    font-weight: 900;
-
+  font-size: 1.75rem;
+  text-transform: uppercase;
+  font-weight: 900;
 }
 
 /* ranking score*/
-.first-place{
-    display: flex;
-    list-style: none;
-    justify-content: space-around;
+.first-place {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
 }
-.second-place{
-    display: flex;
-    list-style: none;
-    justify-content: space-around;
+.second-place {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
 }
-.third-place{
-    display: flex;
-    list-style: none;
-    justify-content: space-around;
-}
-.ranking li {
-   display: block;
-}
-.ranking li a {
-    font-size: 1.75rem;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: #202427;
+.third-place {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
 }
 
+.ranking {
+  text-shadow: 1px 1px 2px #333;
+}
+.ranking li {
+  display: block;
+}
+.ranking li a {
+  font-size: 1.75rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #202427;
+}
+
+.btn-container {
+  display: flex;
+  width: 830px;
+  margin: auto;
+}
 
 .btn1 {
   display: block;
@@ -138,17 +156,25 @@ letter-spacing: 2px;
   font-size: 32px;
   font-weight: 900;
   outline: none;
-  background-color: #f1ecee0e;
+  background-color: #212425;
   border-color: #c4c4c4;
   border-width: 3px;
   transition: all 0.5s ease-in-out;
   transition: scale 0.2s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.btn1 a {
+  text-decoration: none;
+  color: #c4c4c4;
+}
+
+.btn1:hover a {
+  color: #202427;
 }
 
 .btn1:hover {
   background-color: #c4c4c4;
-  opacity: 70%;
-  color: #202427;
   border: none;
   font-weight: 900;
 }

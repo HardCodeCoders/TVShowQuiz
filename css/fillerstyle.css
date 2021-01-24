@@ -1,6 +1,6 @@
 .container {
   padding: 150px;
-  background-image: linear-gradient(to left, rgba(4, 49, 82, 0.6), rgba(4, 29, 46, 0.7)), url("../img/got.jpg");
+  background-image: linear-gradient(to left, rgba(31, 35, 37, 0.6), rgba(36, 36, 36, 0.7)), url("../img/got.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -28,38 +28,41 @@ h2 {
 }
 
 .GameOfThrone {
-    margin-left: -9rem;
-    position: relative;
-    z-index: 10;
-    overflow: hidden;
-    transition: all 0.5s ease-in-out;
-  }
-  
-  .GameOfThrone:hover {
-    transform: scale(1.2);
-  }
-  
-  .Breaking-Bad {
-    margin-right: 3rem;
-    z-index: -1;
-    transition: all 0.5s ease-in-out;
-  }
-  
-  .Breaking-Bad:hover {
-    transform: scale(1.2);
-    z-index: 11;
-  }
-  
-  .RickAndMorty {
-    margin-left: -12rem;
-    z-index: -1;
-    transition: all 0.5s ease-in-out;
-  }
-  
-  .RickAndMorty:hover {
-    transform: scale(1.2);
-    z-index: 99;
-  }
+  margin-left: -9rem;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  transform-origin: bottom;
+}
+
+.GameOfThrone:hover {
+  transform: scale(1.2);
+}
+
+.Breaking-Bad {
+  margin-right: 3rem;
+  z-index: -1;
+  transition: all 0.5s ease-in-out;
+  transform-origin: bottom;
+}
+
+.Breaking-Bad:hover {
+  transform: scale(1.2);
+  z-index: 11;
+}
+
+.RickAndMorty {
+  margin-left: -12rem;
+  z-index: -1;
+  transition: all 0.5s ease-in-out;
+  transform-origin: bottom;
+}
+
+.RickAndMorty:hover {
+  transform: scale(1.2);
+  z-index: 99;
+}
 
 /* filler panel */
 
@@ -106,6 +109,7 @@ h2 {
 .custom-field input:valid + .placeholder,
 .custom-field input:focus + .placeholder {
   top: -0.5rem;
+  left: 8rem;
   font-size: 16px;
   color: rgb(255, 255, 255);
   outline: none;

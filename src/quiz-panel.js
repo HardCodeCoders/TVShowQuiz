@@ -5,9 +5,9 @@ import BBPanel from "./bb-panel";
 const answersBtn = document.querySelectorAll(".main__quiz__button");
 const logoImg = document.querySelector("#logo");
 
-const gotQuizPanel = new GOTPanel(50);
-const rmQuizPanel = new RMPanel(50);
-const bbQuizPanel = new BBPanel(50);
+const gotQuizPanel = new GOTPanel(30);
+const rmQuizPanel = new RMPanel(30);
+const bbQuizPanel = new BBPanel(30);
 const QuizParams = {
   correctAnswer: "",
   questionCounter: 0,
@@ -81,8 +81,8 @@ async function setQuestionParameters(base) {
   const newOrder = base.shuffledArray(answers);
   QuizParams.correctAnswer = answers[0];
 
-  insertImage(QuizParams.correctAnswer);
   insertAnswers(newOrder);
+  insertImage(QuizParams.correctAnswer);
 }
 
 export function showQuestion(quizName) {
