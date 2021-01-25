@@ -38,7 +38,7 @@
             <li>score</li>
           </ul>
 
-          <dev class="ranking">
+          <div class="ranking">
             <ul class="first-place">
               <li>1st</li>
               <li id="stUsername">blabla</li>
@@ -54,7 +54,7 @@
               <li id="rdUsername">blabla</li>
               <li id="rdScore">15</li>
             </ul>
-          </dev>
+          </div>
         </div>
       </div>
 
@@ -91,6 +91,10 @@
       </div>
     </div>
     <script>
+      document.getElementById("name").innerText = localStorage.getItem(
+        "username"
+      );
+
       document.getElementById("wrong").innerText = localStorage.getItem(
         "falseAnswer"
       );
@@ -100,24 +104,22 @@
       );
 
       document.getElementById("total").innerText =
+        parseInt(localStorage.getItem("trueAnswer")) * 10 -
+        parseInt(localStorage.getItem("falseAnswer"))
+
+      document.getElementById("stScore").innerText =
         parseInt(localStorage.getItem("trueAnswer")) * 10;
 
-      document.getElementById("stScore").innerText = parseInt(localStorage.getItem("trueAnswer")) * 10;
-
-      document.getElementById("name").innerText = localStorage.getItem(
-      "username"
-      );
-
       document.getElementById("stUsername").innerText = localStorage.getItem(
-      "username"
+        "username"
       );
 
-      function getScore () {
-        var scoreInput = document.getElementById("total").value;
-        localStorage.setItem("total", scoreInput);
-        return scoreInput;
-      }
+      document.getElementById("ndScore").innerText =
+        parseInt(localStorage.getItem("trueAnswer")) * 10;
 
+      document.getElementById("ndUsername").innerText = localStorage.getItem(
+        "username"
+      );
     </script>
     <script defer src="index.js"></script>
   </body>
