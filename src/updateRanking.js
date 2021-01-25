@@ -1,22 +1,3 @@
-const username = document.getElementById("username");
-const button = document.getElementById('.button')
-const storedInput = localStorage.getItem('.textinput')
-
-if(storageInput) {
-    username.textContent = storedInput
-}
-
-const saveToLocalStorage = () => {
-localStorage.setItem('.textinput', username)
-}
-
-button.addEventListener('click', saveToLocalStorage)
-
-
-
-
-
-
 export function updateRanking({ name, points, difficultyLevel: category }) {
     let rankingStorage = localStorage.getItem(quizName);
     if (!rankingStorage) {
