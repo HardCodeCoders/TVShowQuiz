@@ -41,18 +41,18 @@
           <dev class="ranking">
             <ul class="first-place">
               <li>1st</li>
-              <li>blabla</li>
-              <li>15</li>
+              <li id="stUsedname">blabla</li>
+              <li id="stScore">15</li>
             </ul>
             <ul class="second-place">
               <li>2nd</li>
-              <li>blabla</li>
-              <li>15</li>
+              <li id="ndUsername">blabla</li>
+              <li id="ndUsername">15</li>
             </ul>
             <ul class="third-place">
               <li>3rd</li>
-              <li>blabla</li>
-              <li>15</li>
+              <li id="rdUsername">blabla</li>
+              <li id="rdScore">15</li>
             </ul>
           </dev>
         </div>
@@ -76,12 +76,16 @@
       </div>
     </div>
     <script>
-      document.getElementById("wrong").innerText = localStorage.getItem("falseAnswer");
+      document.getElementById("wrong").innerText = localStorage.getItem(
+        "falseAnswer"
+      );
 
-      document.getElementById("right").innerText = localStorage.getItem("trueAnswer");
+      document.getElementById("right").innerText = localStorage.getItem(
+        "trueAnswer"
+      );
 
-      document.getElementById("total").innerText = localStorage.getItem("usernameInput");
-
+      document.getElementById("total").innerText =
+        parseInt(localStorage.getItem("trueAnswer")) * 10;
     </script>
     <script defer src="index.js"></script>
   </body>
