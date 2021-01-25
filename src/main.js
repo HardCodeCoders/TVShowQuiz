@@ -2,7 +2,7 @@ import { showQuestion } from "./quiz-panel";
 import { selectCategory } from "./category-selection";
 import QuizTimer from "./timer";
 import setBackground from "./filler-panel";
-import getUsername from "./ranking-panel";
+import { getUsername, displayNameOnPage } from "./ranking-panel";
 
 const quizTimer = new QuizTimer();
 
@@ -18,6 +18,8 @@ switch (page) {
   case "filler-panel.html":
     // Seb background image
     setBackground(null);
+
+    // Save user name to local storage
     getUsername();
     break;
 
@@ -30,6 +32,10 @@ switch (page) {
     quizTimer.countingDown();
     break;
 
+  case "ranking.html":
+    displayNameOnPage();
+    break;
+
   default:
-    console.error("Wrong page name");
+    console.log("Page ", page);
 }
