@@ -1,3 +1,23 @@
+const storageInput = document.querySelector('.name')
+const text = document.querySelector('.text')
+const button = document.querySelector('.button')
+const storedInput = localStorage.getItem('.textinput')
+
+if(storageInput) {
+    text.textContent = storedInput
+}
+
+const saveToLocalStorage = () => {
+localStorage.setItem('.textinput', text.textContent)
+}
+
+button.addEventListener('click', saveToLocalStorage)
+
+
+
+
+
+
 export function updateRanking({ name, points, difficultyLevel: category }) {
     let rankingStorage = localStorage.getItem(category);
     if (!rankingStorage) {
