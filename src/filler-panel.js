@@ -8,7 +8,7 @@ export default function setBackground() {
       break;
 
     case "rm":
-      bgImg.style.backgroundImage = `url('img/rm.png')`;
+      bgImg.style.backgroundImage = `url('img/rm.jpg')`;
       break;
 
     case "bb":
