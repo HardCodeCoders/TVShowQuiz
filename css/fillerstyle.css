@@ -32,6 +32,11 @@ h2 {
 .photo {
   float: right;
   top: 15%;
+  border-bottom-left-radius: 50% 25%;
+  border-bottom-right-radius: 50% 25%;
+  overflow: hidden;
+  padding: 6rem 2rem 0;
+  margin-top: -6rem;
 }
 
 .GameOfThrone {
@@ -131,7 +136,7 @@ h2 {
   border-radius: 50px;
   margin-left: 135px;
   transition: all 0.5s ease-in-out;
-  color: #202427;
+  color: #c4c4c4;
   font-size: 36px;
   font-weight: 900;
   outline: none;
