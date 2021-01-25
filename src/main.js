@@ -2,7 +2,7 @@ import { showQuestion } from "./quiz-panel";
 import { selectCategory } from "./category-selection";
 import QuizTimer from "./timer";
 import setBackground from "./filler-panel";
-import { getUsername, displayNameOnPage } from "./ranking-panel";
+import { getUsername, displayNameOnPage, bestResults } from "./ranking-panel";
 
 const quizTimer = new QuizTimer();
 
@@ -34,6 +34,7 @@ switch (page) {
 
   case "ranking.html":
     displayNameOnPage();
+    bestResults();
     break;
 
   default:

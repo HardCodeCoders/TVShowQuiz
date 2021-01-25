@@ -16,9 +16,6 @@ const QuizParams = {
   quizName: "",
 };
 
-localStorage.setItem("trueAnswer", 0);
-localStorage.setItem("falseAnswer", 0);
-
 // check answers and increment counters
 function checkAnswer(e) {
   // disable button action
