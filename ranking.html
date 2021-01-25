@@ -101,6 +101,13 @@
 
       document.getElementById("total").innerText =
         parseInt(localStorage.getItem("trueAnswer")) * 10;
+
+      document.getElementById("stScore").innerText = parseInt(localStorage.getItem("trueAnswer")) * 10;
+
+      document.getElementById("stUsername").innerText = localStorage.getItem(
+      "usernameInput"
+      );
+
     </script>
     <script defer src="index.js"></script>
   </body>
