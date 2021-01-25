@@ -104,7 +104,7 @@
       );
 
       document.getElementById("total").innerText =
-        parseInt(localStorage.getItem("trueAnswer")) * 10;
+        parseInt(localStorage.getItem("trueAnswer")) * 10 - parseInt(localStorage.getItem("falseAnswer"));
     </script>
     <script defer src="index.js"></script>
   </body>
