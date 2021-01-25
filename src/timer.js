@@ -1,7 +1,7 @@
 const quizTime = document.querySelector(".footer__time-bar__time");
 const characterImg = document.querySelector("#character-img");
 const styleElem = document.head.appendChild(document.createElement("style"));
-const TIME = 10;
+const TIME = 60;
 export default class QuizTimer {
   constructor() {
     this.timeLeft = TIME;
