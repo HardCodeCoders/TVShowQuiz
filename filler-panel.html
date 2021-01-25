@@ -44,18 +44,15 @@
       </h2>
 
       <label class="name">
-        <input id = username class="name" type="text" required />
+        <input id="username" class="name" type="text" required />
         <span class="placeholder">Enter Your Name</span>
       </label>
-      <a href="quiz-panel.html"> <button id = button class="btn2" onclick="getUsername() ;">PLAY</button></a>
+      <a href="quiz-panel.html">
+        <button id="button" class="btn2" onclick="getUsername() ;">
+          PLAY
+        </button></a
+      >
     </div>
     <script defer src="index.js"></script>
-    <script type="text/javascript">
-      function getUsername () {
-        var usernameInput = document.getElementById("username").value;
-        localStorage.setItem("username", usernameInput);
-        return usernameInput;
-      }
-    </script>
   </body>
 </html>
