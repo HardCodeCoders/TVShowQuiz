@@ -104,8 +104,12 @@
 
       document.getElementById("stScore").innerText = parseInt(localStorage.getItem("trueAnswer")) * 10;
 
+      document.getElementById("name").innerText = localStorage.getItem(
+      "username"
+      );
+
       document.getElementById("stUsername").innerText = localStorage.getItem(
-      "usernameInput"
+      "username"
       );
 
     </script>
