@@ -13,5 +13,4 @@ export function getUsername() {
 export function displayNameOnPage() {
   const name = document.querySelector("#name");
   name.innerText = localStorage.getItem("username");
-  console.log("test22");
 }
