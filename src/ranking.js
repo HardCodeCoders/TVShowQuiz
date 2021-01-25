@@ -26,8 +26,4 @@ saveHighScore = (e) => {
 
     localStorage.setItem('highScores', JSON.stringify(highScores));
     window.location.assign('/');
-};
-
-document.getElementById("wrong").innerText = localStorage.getItem("falseAnswer");
-
-document.getElementById("right").innerText = localStorage.getItem("trueAnswer");
+}
