@@ -43,9 +43,20 @@ function checkAnswer(e) {
 // Set character image on the webpage
 function insertImage(correctAnswer) {
   const characterImg = document.querySelector("#character-img");
+  const bgImg = document.querySelector(".quiz-panel");
+
   setTimeout(() => {
     if (correctAnswer.image === undefined) insertImage(correctAnswer);
-    else characterImg.style.backgroundImage = `url("${correctAnswer.image}")`;
+    else {
+      characterImg.style.backgroundImage = `url("${correctAnswer.image}")`;
+      const category = localStorage.getItem("category");
+      bgImg.style.backgroundImage = `linear-gradient(
+        170deg,
+        rgba(0, 15, 31, 0.5) 5%,
+        rgba(206, 70, 70, 0) 40%,
+        rgba(4, 8, 15, 0.9) 100%
+      ), url("../img/${category}.jpg")`;
+    }
   }, 100);
 }
 
