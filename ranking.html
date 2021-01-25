@@ -41,7 +41,7 @@
           <dev class="ranking">
             <ul class="first-place">
               <li>1st</li>
-              <li id="stUsedname">blabla</li>
+              <li id="stUsername">blabla</li>
               <li id="stScore">15</li>
             </ul>
             <ul class="second-place">
@@ -111,6 +111,12 @@
       document.getElementById("stUsername").innerText = localStorage.getItem(
       "username"
       );
+
+      function getScore () {
+        var scoreInput = document.getElementById("total").value;
+        localStorage.setItem("total", scoreInput);
+        return scoreInput;
+      }
 
     </script>
     <script defer src="index.js"></script>
