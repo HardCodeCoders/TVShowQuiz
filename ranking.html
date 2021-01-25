@@ -75,7 +75,14 @@
         </button>
       </div>
     </div>
-    <script defer src="ranking.js"></script>
+    <script>
+      document.getElementById("wrong").innerText = localStorage.getItem("falseAnswer");
+
+      document.getElementById("right").innerText = localStorage.getItem("trueAnswer");
+
+      document.getElementById("total") = localStorage.getItem("username");
+      
+    </script>
     <script defer src="index.js"></script>
   </body>
 </html>
