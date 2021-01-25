@@ -54,15 +54,15 @@ export function bestResults() {
 
   const thirdScore = parseInt(localStorage.getItem("thirdScore"));
 
-  if (score > thirdScore) {
-    localStorage.setItem("third", user);
-    localStorage.setItem("thirdScore", score);
+  if (score > firstScore) {
+    localStorage.setItem("first", user);
+    localStorage.setItem("firstScore", score);
   } else if (score > secondScore) {
     localStorage.setItem("second", user);
     localStorage.setItem("secondScore", score);
-  } else if (score > firstScore) {
-    localStorage.setItem("first", user);
-    localStorage.setItem("firstScore", score);
+  } else if (score > thirdScore) {
+    localStorage.setItem("third", user);
+    localStorage.setItem("thirdScore", score);
   }
 
   document.querySelector("#stUsedname").innerText = localStorage.getItem(

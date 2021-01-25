@@ -24,6 +24,8 @@ switch (page) {
     break;
 
   case "quiz-panel.html":
+    localStorage.setItem("falseAnswer", 0);
+    localStorage.setItem("trueAnswer", 0);
     // Display panel for choosen category
     const category = localStorage.getItem("category");
     showQuestion(category);
