@@ -33,12 +33,8 @@ export default class QuizTimer {
           // stop timer
           if (this.timeLeft < 0) {
             clearInterval(t);
-            alert(
-              "Correct: " +
-                localStorage.getItem("trueAnswer") +
-                "\nWrong: " +
-                localStorage.getItem("falseAnswer")
-            );
+            localStorage.getItem("trueAnswer");
+            localStorage.getItem("falseAnswer");
             const page = window.location
               .toString()
               .substr(0, window.location.toString().lastIndexOf("/"));
