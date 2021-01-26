@@ -47,12 +47,15 @@ function insertImage(correctAnswer) {
     else {
       characterImg.style.backgroundImage = `url("${correctAnswer.image}")`;
       const category = localStorage.getItem("category");
+      const page = window.location
+        .toString()
+        .substr(0, window.location.toString().lastIndexOf("/"));
       bgImg.style.backgroundImage = `linear-gradient(
         170deg,
         rgba(0, 15, 31, 0.5) 5%,
         rgba(206, 70, 70, 0) 40%,
         rgba(4, 8, 15, 0.9) 100%
-      ), url("../img/${category}.jpg")`;
+      ), url("${page}/img/${category}.jpg")`;
     }
   }, 100);
 }
